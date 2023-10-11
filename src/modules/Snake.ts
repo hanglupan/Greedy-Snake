@@ -8,6 +8,7 @@ class Snake{
     constructor() {
         this.element = document.getElementById('snake')!;
         this.head = document.querySelector('#snake > div ') as HTMLElement;//找到第一个div作为头 断言
+        // console.log(this.element);
         this.bodies = this.element.getElementsByTagName('div');//返回带有指定标签名的对象的集合
     }
     get X() {

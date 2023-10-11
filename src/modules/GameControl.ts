@@ -1,5 +1,5 @@
 import Food from "./Food";
-import Snake from "./Sanke";
+import Snake from "./Snake";
 import ScorePanel from "./ScorePanel";
 class GameControl{
     snake: Snake;
@@ -15,6 +15,7 @@ class GameControl{
     }
     init() {
         document.addEventListener('keydown', this.keydownHandler.bind(this));//添加键盘事件监听
+        this.run();//运行
     }
     keydownHandler(event: KeyboardEvent) {//键盘事件
         this.direction = event.key;
